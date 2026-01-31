@@ -8,7 +8,7 @@ using UnityEngine.InputSystem;
 
 [RequireComponent(typeof(BoxCollider2D))]
 
-public class MouseDrag : MonoBehaviour {
+public class MouseMove : MonoBehaviour {
     [SerializeField] private bool isDragging = false;
     [SerializeField] private float maxUp, maxDown = 0.0f;
     private float maxY, minY;
@@ -47,11 +47,6 @@ public class MouseDrag : MonoBehaviour {
     void OnMouseDown()
     {
         isDragging = true;
-    }
-
-    void OnMouseDrag()
-    {   
-		Debug.Log("Mouse Drag");
     }
 
     void OnMouseUp()
