@@ -1,6 +1,6 @@
 using UnityEngine;
 
-[RequireComponent(typeof(BoxCollider2D))]
+[RequireComponent(typeof(Collider2D))]
 
 public class MouseRotate : MonoBehaviour
 {
@@ -17,9 +17,6 @@ public class MouseRotate : MonoBehaviour
 
 			var angle = Vector2.SignedAngle(unitVector, mousePos);
 
-			Debug.Log("Rotating " + angle + " degrees");
-			Debug.Log("mouse x = " + Input.mousePosition.x + " ?= " + mousePos.x);
-			Debug.Log("mouse y = " + Input.mousePosition.y + " ?= " + mousePos.y);
 
 			transform.rotation = Quaternion.Euler(transform.rotation.x, transform.rotation.y, angle);
 		}
