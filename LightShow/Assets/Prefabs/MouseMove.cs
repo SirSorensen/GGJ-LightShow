@@ -1,7 +1,3 @@
-// Source - https://stackoverflow.com/a/38407823
-// Posted by Ghasem, modified by community. See post 'Timeline' for change history
-// Retrieved 2026-01-31, License - CC BY-SA 4.0
-
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;

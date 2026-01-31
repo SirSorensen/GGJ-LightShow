@@ -7,17 +7,21 @@ using UnityEngine.Rendering;
 public class RayCaster : MonoBehaviour
 {
 
-	LayerMask layerMask;
+	LayerMask collisionLayer;
+    LayerMask detectorLayer;
+    public event Action<string, Color> onGoalDetected;
+    public event Action<string> onGoalNotDetected;
 
     void Start()
 	{
-		layerMask = 1 << LayerMask.NameToLayer("Blocker");
+		collisionLayer = 1 << LayerMask.NameToLayer("Blocker");
+        detectorLayer = 1 << LayerMask.NameToLayer("Detector");
 	}
 
     // See Order of Execution for Event Functions for information on FixedUpdate() and Update() related to physics queries
     void FixedUpdate()
     {
-        RaycastHit2D hit = Physics2D.Raycast(transform.position, transform.TransformDirection(Vector2.right), 1000, layerMask);
+        RaycastHit2D hit = Physics2D.Raycast(transform.position, transform.TransformDirection(Vector2.right), 1000, collisionLayer);
         // Does the ray intersect any objects excluding the player layer
 		var beamLength = transform.TransformDirection(Vector2.right);
         if (hit)
@@ -31,5 +35,14 @@ public class RayCaster : MonoBehaviour
 			transform.GetChild(0).transform.localScale = new Vector2(1, 20);
         }
 		Debug.DrawRay(transform.position, beamLength, Color.yellow);
+
+        RaycastHit2D goalHit = Physics2D.Raycast(transform.position, transform.TransformDirection(Vector2.right), 1000, detectorLayer);
+        if (goalHit && goalHit.collider.tag == "Detector")
+        {
+            onGoalDetected?.Invoke(transform.name, transform.GetChild(0).transform.GetChild(0).transform.GetComponent<SpriteRenderer>().color);
+        } else
+        {
+            onGoalNotDetected?.Invoke(transform.name);
+        }
     }
 }
