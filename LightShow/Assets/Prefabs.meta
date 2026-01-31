@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: 40efe4e7712214f0681a4b8be88ce660
+=======
+guid: 7a821ffa1f41ef045ba3dd419d9b5764
+>>>>>>> 6389b0d (Add sprites and light prefab)
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}
