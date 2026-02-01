@@ -41,7 +41,9 @@ public class LightDetector : MonoBehaviour
 		R = math.min(R*255, 255);
 		G = math.min(G*255, 255);
 		B = math.min(B*255, 255);
+		#if UNITY_EDITOR
 		Debug.Log("R,G,B = " + R + "," + G + "," + B);
+		#endif
 	}
 
 	public void SetLightsOnGoal(string _name, Color color)

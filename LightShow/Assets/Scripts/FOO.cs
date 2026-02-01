@@ -12,6 +12,10 @@ public class FOO : MonoBehaviour
     void Update()
     {
         if (Input.GetMouseButtonDown(0))
+        {
+            #if UNITY_EDITOR
             Debug.Log("Pressed left-click.");
+            #endif
+        }
     }
 }

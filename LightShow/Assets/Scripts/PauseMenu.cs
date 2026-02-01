@@ -1,5 +1,3 @@
-
-using UnityEditor.Animations;
 using UnityEngine;
 
 public class PauseMenu : MonoBehaviour
@@ -11,7 +9,9 @@ public class PauseMenu : MonoBehaviour
 	{ 
 		if (Input.GetKeyDown(KeyCode.Escape)) 
 		{
+			#if UNITY_EDITOR
 			Debug.Log("Esacpe it pressed!");
+			#endif
 			onEscapePress();
 		}
 	}
