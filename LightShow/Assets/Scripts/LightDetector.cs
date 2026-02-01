@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using Unity.Mathematics;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 
 [RequireComponent(typeof(Collider2D))]
@@ -9,7 +10,11 @@ using UnityEngine;
 public class LightDetector : MonoBehaviour
 {
 	[SerializeField] public float R, G, B = 0.0f;
+	[SerializeField] public float goalR, goalG, goalB = 255.0f;
 	Dictionary<string, Color> lightSet = new Dictionary<string, Color>(); 
+	[SerializeField] public string nextScene;
+	private float _currentTime = 0.0f;
+	private bool _timerActive = false;
 
 
 
@@ -44,6 +49,26 @@ public class LightDetector : MonoBehaviour
 		#if UNITY_EDITOR
 		Debug.Log("R,G,B = " + R + "," + G + "," + B);
 		#endif
+
+		if (R == goalR && G == goalG && B == goalB)
+		{
+			_timerActive = true;
+		}
+		else
+		{
+			_timerActive = false;
+			_currentTime = 0;
+		}
+
+		if (_timerActive)
+		{
+			_currentTime += Time.deltaTime;
+		}
+
+		if (_currentTime > 2.5)
+		{
+			SceneManager.LoadScene(nextScene);
+		}
 	}
 
 	public void SetLightsOnGoal(string _name, Color color)

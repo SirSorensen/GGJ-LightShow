@@ -31,14 +31,14 @@ public class PauseMenu : MonoBehaviour
 
 	void PauseGame()
 	{
-		Time.timeScale = 0.0f;
+		GameManager.Instance.paused = true;
 		container.SetActive(true);
 	}
 
 	public void ResumeGame()
 	{
 		container.SetActive(false);
-		Time.timeScale = 1.0f;
+		GameManager.Instance.paused = false;
 	}
 	
 	public void QuitGame()

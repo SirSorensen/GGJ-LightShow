@@ -1,4 +1,5 @@
 using System;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class RayCaster : MonoBehaviour
@@ -33,7 +34,7 @@ public class RayCaster : MonoBehaviour
         }
         Debug.DrawRay(transform.position, beamLength, Color.yellow);
 
-        RaycastHit2D goalHit = Physics2D.Raycast(transform.position, transform.TransformDirection(Vector2.right), 1000, detectorLayer);
+        RaycastHit2D goalHit = Physics2D.Raycast(transform.position, transform.TransformDirection(Vector2.right), beamLength.magnitude, detectorLayer);
         if (goalHit && goalHit.collider.tag == "Detector")
         {
             onGoalDetected?.Invoke(transform.name, transform.GetChild(0).transform.GetChild(0).transform.GetComponent<SpriteRenderer>().color);

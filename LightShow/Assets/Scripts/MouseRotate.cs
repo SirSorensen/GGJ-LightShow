@@ -8,7 +8,7 @@ public class MouseRotate : MonoBehaviour
 
 	void Update()
     {
-        if(isDragging)
+        if(isDragging && !GameManager.Instance.paused)
 		{
 
 			Vector2 mousePos = (Vector2)Camera.main.ScreenToWorldPoint(Input.mousePosition);

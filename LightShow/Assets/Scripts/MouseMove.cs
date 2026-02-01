@@ -19,7 +19,7 @@ public class MouseMove : MonoBehaviour {
 
     void Update()
     {
-        if(isDragging)
+        if(isDragging && !GameManager.Instance.paused)
         {
             float mouseY = Camera.main.ScreenToWorldPoint(Input.mousePosition).y;
             float newY = transform.position.y;
