@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 5f3107d78752dbc4d9569ef68e2834a8
+guid: dc8823f09e4994a038c4d1caaab8628e
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 2599969905456701152
-    second: lamp_0
+      213: 6591767145844278672
+    second: illustration-of-military-sandbags-vector_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: lamp_0
+      name: illustration-of-military-sandbags-vector_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 334
-        height: 153
+        x: 86
+        y: 34
+        width: 178
+        height: 282
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 0eed3719ad2f41420800000000000000
-      internalID: 2599969905456701152
+      spriteID: 09583226b49aa7b50800000000000000
+      internalID: 6591767145844278672
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      lamp_0: 2599969905456701152
+      illustration-of-military-sandbags-vector_0: 6591767145844278672
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
