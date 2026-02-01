@@ -129,11 +129,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 414042054122304069, guid: cedc4baeceadc554f9974f9fdb517fb8, type: 3}
       propertyPath: maxUp
-      value: 6
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 414042054122304069, guid: cedc4baeceadc554f9974f9fdb517fb8, type: 3}
       propertyPath: maxDown
-      value: 2
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 3512154657868126818, guid: cedc4baeceadc554f9974f9fdb517fb8, type: 3}
       propertyPath: m_Name
@@ -145,7 +145,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3774705341727786545, guid: cedc4baeceadc554f9974f9fdb517fb8, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.54
+      value: 2.54
       objectReference: {fileID: 0}
     - target: {fileID: 3774705341727786545, guid: cedc4baeceadc554f9974f9fdb517fb8, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1016,7 +1016,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 414042054122304069, guid: cedc4baeceadc554f9974f9fdb517fb8, type: 3}
       propertyPath: maxUp
-      value: 6
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 414042054122304069, guid: cedc4baeceadc554f9974f9fdb517fb8, type: 3}
       propertyPath: maxDown
@@ -2058,11 +2058,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 414042054122304069, guid: cedc4baeceadc554f9974f9fdb517fb8, type: 3}
       propertyPath: maxUp
-      value: 6
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 414042054122304069, guid: cedc4baeceadc554f9974f9fdb517fb8, type: 3}
       propertyPath: maxDown
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3512154657868126818, guid: cedc4baeceadc554f9974f9fdb517fb8, type: 3}
       propertyPath: m_Name
